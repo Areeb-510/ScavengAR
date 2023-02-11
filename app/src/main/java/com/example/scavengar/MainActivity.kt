@@ -14,6 +14,7 @@ import android.os.Vibrator
 import android.provider.Settings
 import android.view.View
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -33,7 +34,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var locationManager : LocationManager
-    private lateinit var fetchLocation : Button
+    private lateinit var fetchLocation : FrameLayout
 //    private val locationPermissionCode = 2
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
     private val permissionId = 2
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var lat : String
     private lateinit var long : String
 
-    private lateinit var arscan : Button
+    private lateinit var arscan : FrameLayout
 
 //    private lateinit var scanner : Button
 

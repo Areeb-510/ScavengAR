@@ -22,14 +22,37 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="15dp"/>
 
-        <Button
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scavengar"
-            android:layout_width="wrap_content"
+<!--        <Button-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/scavengar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="TEST"-->
+<!--            android:id="@+id/test"/>-->
+
+        <FrameLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TEST"
-            android:id="@+id/test"/>
+            android:background="@drawable/bg_button"
+            android:layout_marginHorizontal="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sceneView"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TEST"
+                android:fontFamily="@font/gameplay"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:textSize="20sp"/>
+
+        </FrameLayout>
 
 
         <io.github.sceneview.ar.ArSceneView
