@@ -1,90 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/redressed"
-            android:text="ScavengAR"
-            android:textColor="@color/orange"
-            android:layout_margin="20dp"
-            android:id="@+id/heading"
-            android:textSize="40sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-                android:background="@color/white"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@id/heading"/>
-
-
-
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"/>
 
-        <Button
-            android:id="@+id/arscan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/begin_scan"
-            android:text="Begin Scan"
-            android:padding="20dp"
-            android:textSize="20sp"
-            android:fontFamily="@font/redressed"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="200dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/scavengar"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="15dp"/>
 
-        <Button
-            android:layout_marginTop="50dp"
-            android:id="@+id/fetchlocation"
-            android:textStyle="bold"
-            android:padding="20dp"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/redressed"
-            android:src="@drawable/look_for_clues"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:text="Look for clues"
-            app:layout_constraintTop_toBottomOf="@id/arscan"
 
-            />
+                <FrameLayout
+                        android:id="@+id/arscan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button"
+                    android:layout_marginHorizontal="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/heading"
+                        app:layout_constraintBottom_toTopOf="@id/fetchlocation">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Begin Scan"
+                                android:fontFamily="@font/gameplay"
+                                android:textColor="@color/white"
+                                android:layout_gravity="center"
+                                android:textSize="20sp"/>
 
-<!--        <io.github.sceneview.ar.ArSceneView-->
-<!--            android:visibility="gone"-->
-<!--            android:id="@+id/sceneView"-->
-<!--            app:layout_constraintRight_toRightOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/scavengar"-->
-<!--            app:layout_constraintLeft_toLeftOf="parent"-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="600dp" />-->
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fetchlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button"
+                    android:layout_marginHorizontal="35dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/arscan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="-60dp"
+                    android:layout_marginBottom="150dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Look for Clues"
+                            android:fontFamily="@font/gameplay"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="20sp"/>
+
+                </FrameLayout>
 
 
         <Button
@@ -98,3 +85,5 @@
                 />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
