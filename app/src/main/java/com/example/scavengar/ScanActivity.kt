@@ -3,6 +3,7 @@ package com.example.scavengar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import io.github.sceneview.ar.ArSceneView
@@ -16,7 +17,7 @@ class ScanActivity : AppCompatActivity() {
 
     private lateinit var sceneView: ArSceneView
 
-    private lateinit var test : Button
+    private lateinit var test : FrameLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
